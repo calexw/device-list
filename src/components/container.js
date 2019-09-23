@@ -8,7 +8,7 @@ import MockData from "../api/mock.js";
 
 import AppSidebar from "./sidebar";
 import AppTopBar from "./topbar";
-import AppCards from "./cards";
+import AppMain from "./main";
 
 class AppContainer extends Component {
   constructor() {
@@ -76,7 +76,7 @@ class AppContainer extends Component {
             </Row>
             <Row>
               <Col className="main">
-                <AppCards devices={filtered} />
+                <AppMain devices={filtered} />
               </Col>
             </Row>
           </Col>
