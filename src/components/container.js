@@ -3,14 +3,14 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+import { fetchData } from "../api";
+import MockData from "../api/mock.js";
+
 import AppSidebar from "./sidebar";
 import AppTopBar from "./topbar";
 import AppCards from "./cards";
 
-import { fetchData } from "../api";
-import MockData from "../api/mock.js";
-
-class AppMain extends Component {
+class AppContainer extends Component {
   constructor() {
     super();
     this.state = {
@@ -85,4 +85,4 @@ class AppMain extends Component {
   }
 }
 
-export default AppMain;
+export default AppContainer;
