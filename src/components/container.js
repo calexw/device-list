@@ -21,18 +21,19 @@ class AppContainer extends Component {
   }
 
   statusHandler = event => {
-    const { devices } = this.state;
     const status = event.target.value;
+    const { devices } = this.state;
     const filtered = devices.filter(device => {
-      if (status === "Online") {
-        return device.isOnline;
-      } else if (status === "Offline") {
-        return !device.isOnline;
-      } else {
-        return device.id;
+      switch (status) {
+        case "Online":
+          return device.isOnline;
+        case "Offline":
+          return !device.isOnline;
+        default:
+          return device;
       }
     });
-    this.setState({ filtered: filtered });
+    this.setState({ filtered });
   };
 
   getTypeNames = devices => {

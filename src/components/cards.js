@@ -25,8 +25,8 @@ const AppCards = ({ devices }) => {
               second: "numeric"
             }).format(device.lastPacketTime)}
             <br />
-            {device.stateOfCharge || device.stateOfCharge === null
-              ? "State of Charge: " + device.stateOfCharge
+            {device.isOnline && device.stateOfCharge
+              ? "State of Charge: " + device.stateOfCharge + "%"
               : ""}
           </Card.Text>
         </Card.Body>
